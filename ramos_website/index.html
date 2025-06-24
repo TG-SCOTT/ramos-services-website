@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ramos Services</title>
+
+
+
+  <link rel="stylesheet" href="style.css" />
+</head><body>
+  <div class="slider-wrapper">
+    <button class="arrow left" onclick="slide(-1)">&#8592;</button>
+    
+    <div class="slider-track" id="slider-track">
+      <div class="container">
+        <h1>Ramos Cleaning <br>& <br>General Services</h1>
+        <p class="tagline">
+          We offer Shopping Services, Delivery Shoppers, Cooking Services and Cleaning Services <br> We clean: house, townhouse, condo, apartment, office and windows
+        </p><br>
+        <p class="areas">
+          Service available in: <strong>Brentwood, Culver City, Beverly Hills, Santa Monica, and Malibu.</strong>
+        </p>
+
+        <div class="contacts">
+          <div class="person">
+            <strong>Blanca Ramos</strong><br>
+            📞 424-558-4537<br>
+            ✉️ ramosandgeneralservices@gmail.com
+          </div><br>
+          <div class="person">
+            <strong>Raymundo Gonzalez</strong><br>
+            📞 310-626-2544<br>
+            ✉️ ozumba3838@gmail.com
+          </div>
+        </div>
+        License Number: 11619465
+      </div>
+
+      <div class="container">
+        <h1>B&R Discount Market</h1>
+        <p class="tagline">
+          Shoes, Clothing, Hand Bags, Cosmetics<br>
+          Instagram: <strong>bnr_discountmarket</strong>
+        </p>
+
+        <div class="contacts">
+          <div class="person">
+          <strong>Blanca Ramos</strong><br>
+            📞 424-558-4537<br>
+            ✉️ ramosandgeneralservices@gmail.com
+          </div><br>
+          <div class="person">
+            <strong>Raymundo Gonzalez</strong><br>
+            📞 310-626-2544<br>
+            ✉️ ozumba3838@gmail.com
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <button class="arrow right" onclick="slide(1)">&#8594;</button>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+
+  </div>
+
+  <script>
+    let currentIndex = 0;
+    const track = document.getElementById('slider-track');
+    const totalCards = track.children.length;
+
+    function slide(direction) {
+      currentIndex += direction;
+      if (currentIndex < 0) currentIndex = 0;
+      if (currentIndex > totalCards - 1) currentIndex = totalCards - 1;
+
+      const slideAmount = currentIndex * 620; // 600 width + 2*10 margin
+      track.style.transform = `translateX(-${slideAmount}px)`;
+    }
+
+  </script>
+</body>
+</html>
